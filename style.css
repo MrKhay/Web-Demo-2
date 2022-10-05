@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* ------------------- Variables ---------------------- */
+
+:root {
+  /* text colors */
+  --text-gray: #808291;
+  --text-white: #f8f9fa;
+  --text-light: #f6f6f6;
+  --text-dark: #111113;
+  --text-dark2: #1a3760d4;
+  --text-red: rgb(221, 19, 59);
+  --box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 10%);
+  --bg-blue: rgb(112, 65, 197);
+  --bg-red: rgb(182, 80, 80);
+  --bg-yellow: rgb(184, 184, 76);
+  --bg-purple: rgb(143, 79, 118);
+
+  /* font family */
+  --font-poppins: "Poppins", "sans-serif";
+
+  /* gradients colors */
+
+  /* --bg-gradient: linear-gradient(to right #ff512f, #dd2476); */
+  --bg-gradient: #ff512f;
+  /* --bg-gradient-indigo: linear-gradient(to right #8e2de2, #4a00e0); */
+  --bg-gradient-indigo: #8e2de2;
+  /* --bg-gradient-peach: linear-gradient(to right #fff7f3, #fff7f3); */
+  --bg-gradient-peach: #fff7f3;
+
+  /* images */
+  --bg-cover: url("/web_pract3/assets/bgimg1.png");
+  --bg-image1: url("/web_pract3/assets/img1.png");
+  --bg-image2: url("/web_pract3/assets/img2.png");
+  --bg-image3: url("/web_pract3/assets/img3.png");
+}
+
+/* ------------------- Variables ---------------------- */
+
+* > * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* outline-color: #ff512f;
+  outline-width: 1px;
+  outline-style: solid; */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--text-light);
+}
+
+/* ------------------- /Variables ---------------------- */
+
+/* -------------Media Querey-------------- */
+
+/* for large screen sm (640px) */
+@media (min-width: 640px) {
+}
+
+/* for large screen size md (768px) */
+@media (min-width: 768px) {
+  .lg-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* for large screen size lg (1024px) */
+@media (min-width: 1024px) {
+}
+
+/* for large screen size xl (1280px) */
+@media (min-width: 1280px) {
+  #nav .menu-btn {
+    display: none;
+  }
+
+  #nav {
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+
+  #nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0 3rem !important;
+  }
+
+  #nav ul > li {
+    padding: 0 1rem !important;
+    line-height: 3rem !important;
+    display: flex !important;
+    align-items: center !important;
+    color: var(--text-white) !important;
+  }
+
+  .toggle-nav-visibility {
+    display: flex !important;
+  }
+
+  .toggle-logo-visiblity {
+    opacity: 1;
+  }
+
+  .lg-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* --------------/Media Querey---------- */
+
+/* ------------------- Global Classes ---------------------- */
+
+.text-dark {
+  color: var(--text-dark);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+.text-gray {
+  color: var(--text-gray);
+}
+.text-red {
+  color: var(--text-red);
+}
+
+.bg-gradient {
+  background-color: var(--bg-gradient);
+}
+.bg-gradient-indigo {
+  background: var(--bg-gradient-indigo);
+}
+.bg-gradient-peach {
+  background: var(--bg-gradient-peach);
+}
+.bg-gradient-peach {
+  background: var(--bg-gradient-peach);
+}
+.bg-gradient-red {
+  background: var(--bg-red);
+}
+.bg-gradient-blue {
+  background: var(--bg-blue);
+}
+.bg-gradient-yellow {
+  background: var(--bg-yellow);
+}
+.bg-gradient-purple {
+  background: var(--bg-purple);
+}
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.text-sm {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-md {
+  font-size: 1.5em;
+}
+
+.text-lg {
+  font-size: 2.2em;
+  line-height: 4rem;
+}
+
+.text-xl {
+  font-size: 3em;
+}
+
+.text-2xl {
+  font-size: 5em;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-10 {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+.px-2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.px-5 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-10 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.my-5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.d-inline {
+  display: inline-block;
+}
+
+.d-block {
+  display: block;
+}
+
+.grid {
+  display: grid;
+}
+
+/* ------------------- /Global Classes ---------------------- */
+
+/* ----------------- Nav Style -------------------*/
+
+#nav {
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  transition: all 0.9s ease;
+}
+#nav .nav-brand {
+  padding: 0 4rem;
+}
+
+#nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+#nav ul > li {
+  padding: 0 1rem;
+  line-height: 3rem;
+  display: flex;
+  align-items: center;
+  color: var(--text-white);
+}
+
+.nav-colored {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-transparent {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+#nav .nav-brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#nav .nav-brand a {
+  display: flex;
+  flex-direction: row;
+}
+
+#nav ul > li a {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--text-white);
+  transition: 10ms ease-in;
+}
+
+#nav ul > li a:hover {
+  color: var(--text-red);
+}
+
+#nav button {
+  background-color: transparent;
+  border: none;
+  color: var(--text-light);
+}
+
+#nav .menu-btn i {
+  color: var(--text-red);
+  cursor: pointer;
+  position: relative;
+  right: 0;
+}
+
+.toggle-nav-visibility {
+  display: none;
+}
+
+.toggle-logo-visiblity {
+  opacity: 0;
+}
+
+/* ------------------- /Nav Style -------------------*/
+
+/* ------------------- Sec-1 Style -------------------*/
+
+#site-main .sec-1 {
+  background-color: rgba(19, 18, 20, 0.432);
+  background-image: url("/web_pract4/assests/hero-bg.png");
+  background-blend-mode: color-burn;
+  background-size: fill;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 12rem;
+  padding-left: 5rem;
+}
+
+#site-main .port-btn {
+  width: auto;
+  padding-top: 2rem;
+}
+#site-main .port-btn a {
+  width: auto;
+  border: 3px solid var(--text-red);
+  transition: 5ms ease-in;
+}
+
+#site-main .port-btn a:hover {
+  background-color: var(--text-red);
+  color: var(--text-white);
+}
+/* ------------------- /Sec-1 Style -------------------*/
+
+/* ------------------- Sec-2 Style -------------------*/
+
+#site-main .sec-2 {
+  border-bottom: 1px solid gray;
+  filter: blur();
+}
+
+#site-main .sec-2 h2,
+#site-main .sec-2 p {
+  text-align: center;
+}
+
+#site-main .grid {
+  grid-gap: 2rem;
+}
+
+#site-main .sec-2 .grid-item {
+  margin-top: 2rem;
+  padding: 1rem 1rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("/web_pract4/assests/img-1.png");
+
+  background-size: fill;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  border-radius: 0.8rem;
+  transition: all 0.2s ease-out;
+}
+
+#site-main .sec-2 .grid .grid-ite .thumbnail:hover {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+#site-main .sec-2 .grid-item:hover {
+  transform: scale(1.05);
+}
+
+#site-main .sec-2 .grid-item p {
+  text-align: left;
+}
+
+/* ------------------- /Sec-2 Style -------------------*/
+
+/* ------------------- Sec-3 Style -------------------*/
+
+#site-main .sec-3 {
+  position: relative;
+  height: 500px;
+}
+
+#site-main .sec-3 div {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* ------------------- /Sec-3 Style -------------------*/
