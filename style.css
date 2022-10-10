@@ -276,7 +276,7 @@ body {
   flex-direction: column;
   position: fixed;
   z-index: 1;
-  transition: all 0.9s ease;
+  transition: 300ms ease-in;
 }
 #nav .nav-brand {
   padding: 0 4rem;
@@ -295,6 +295,7 @@ body {
   display: flex;
   align-items: center;
   color: var(--text-white);
+  transition: 300ms ease-in;
 }
 
 .nav-colored {
@@ -319,7 +320,7 @@ body {
   font-size: 1.1em;
   font-weight: 500;
   color: var(--text-white);
-  transition: 10ms ease-in;
+  transition: 200ms ease-in;
 }
 
 #nav ul > li a:hover {
@@ -332,8 +333,21 @@ body {
   color: var(--text-light);
 }
 
+#nav button i {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 0.1em 0.1em;
+  color: var(--text-light);
+  transition: 300ms ease-in;
+}
+
+#nav button i:hover {
+  background-color: rgba(red, 0.3);
+}
+
 #nav .menu-btn i {
-  color: var(--text-red);
+  color: var(--text-white);
   cursor: pointer;
   position: relative;
   right: 0;
@@ -341,6 +355,7 @@ body {
 
 .toggle-nav-visibility {
   display: none;
+  transition: 300ms ease-in;
 }
 
 .toggle-logo-visiblity {
@@ -369,7 +384,7 @@ body {
 #site-main .port-btn a {
   width: auto;
   border: 3px solid var(--text-red);
-  transition: 5ms ease-in;
+  transition: 0.4s ease-in-out;
 }
 
 #site-main .port-btn a:hover {
@@ -397,23 +412,19 @@ body {
 #site-main .sec-2 .grid-item {
   margin-top: 2rem;
   padding: 1rem 1rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(3, 15, 39, 0.8), rgba(3, 15, 39, 0.8)),
     url("/web_pract4/assests/img-1.png");
 
   background-size: fill;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: flex-start;
   border-radius: 0.8rem;
-  transition: all 0.2s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #site-main .sec-2 .grid .grid-ite .thumbnail:hover {
-  -ms-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -o-transform: scale(1.2);
   transform: scale(1.2);
 }
 
@@ -429,16 +440,27 @@ body {
 
 /* ------------------- Sec-3 Style -------------------*/
 
-#site-main .sec-3 {
-  position: relative;
-  height: 500px;
+#site-main .sec-3 .grid .grid-item div {
+  background-color: rgb(62, 74, 87);
+  text-align: start;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-#site-main .sec-3 div {
-  height: 10rem;
-  width: 10rem;
-  border-radius: 10px;
-  padding: 5px;
+#site-main .sec-3 .grid .grid-item img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 14rem;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  filter: brightness(50%);
+  transition: all 0.5s ease-in;
+  overflow: hidden;
+}
+
+#site-main .sec-3 .grid .grid-item img:hover {
+  filter: brightness(100%);
 }
 
 /* ------------------- /Sec-3 Style -------------------*/
