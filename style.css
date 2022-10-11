@@ -295,7 +295,6 @@ body {
   display: flex;
   align-items: center;
   color: var(--text-white);
-  transition: 300ms ease-in;
 }
 
 .nav-colored {
@@ -320,7 +319,6 @@ body {
   font-size: 1.1em;
   font-weight: 500;
   color: var(--text-white);
-  transition: 200ms ease-in;
 }
 
 #nav ul > li a:hover {
@@ -339,7 +337,6 @@ body {
   border-radius: 50%;
   padding: 0.1em 0.1em;
   color: var(--text-light);
-  transition: 300ms ease-in;
 }
 
 #nav button i:hover {
@@ -355,11 +352,11 @@ body {
 
 .toggle-nav-visibility {
   display: none;
-  transition: 300ms ease-in;
 }
 
 .toggle-logo-visiblity {
   opacity: 0;
+  transition: all 20s ease-in;
 }
 
 /* ------------------- /Nav Style -------------------*/
